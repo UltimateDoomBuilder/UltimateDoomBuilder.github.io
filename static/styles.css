@@ -1,0 +1,209 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: url(./udb-splash-fullres.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: Inter;
+	padding-bottom: 64px;
+}
+
+header {
+	text-align: center;
+	text-shadow: 0 0 8px #8688ff, 0 0 2px #fff;
+	font-size: 48px;
+}
+
+header h1 {
+	background: rgba(0, 0, 0, 0.7);	
+	margin: 64px 0;
+	backdrop-filter: blur(9px);
+	font-weight: 500;
+	padding: 16px;
+}
+
+a:link, a:visited {
+	color: #9b9dff;
+	text-decoration: underline;
+}
+
+a:hover, a:active {
+	color: #d2e1ff;
+}
+
+main {
+	background: rgba(0, 0, 0, 0.9);
+	flex-grow: 1;
+	margin: 0 128px;
+	backdrop-filter: blur(9px);
+	color: #eee;
+	padding: 32px;
+}
+
+.x64-notice {
+	background: #9b9dff3f;
+	padding: 16px;
+}
+
+.x64-notice strong {
+	color: red;
+}
+
+.primary-version {
+	margin-top: 16px;
+	gap: 16px;
+	display: flex;
+}
+
+.primary-download-link:link, .primary-download-link:visited {
+	text-decoration: none;
+	color: white;
+}
+
+.primary-download-link {
+	overflow: hidden;
+	position: relative;
+	flex-grow: 1;
+	padding: 16px;
+	min-height: 128px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: #9b9dff8f;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.primary-download-link:hover, .primary-download-link:active {
+	background: #9b9dffaf;
+}
+
+.primary-download-specifics {
+	font-weight: 400;
+	opacity: 0.8;
+	font-size: 85%;
+	margin-top: 8px;
+}
+
+.recommended:after {
+	content: 'Recommended';
+	text-transform: uppercase;
+}
+
+.recommended {
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: rotate(25deg) translate(108px, 80px) scale(1);
+	transform-origin: top right;
+	padding: 0 80px;
+	background: #9b9dff;
+	pointer-events: none;
+}
+
+.versions-header {
+	font-weight: 600;
+	font-size: 24px;
+	margin-top: 16px;
+}
+
+.past-versions {
+	margin-top: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.version-header {
+	background: #9b9dff8f;
+	padding: 8px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.version-revision {
+	color: white;
+	font-weight: 500;
+}
+
+.version-date {
+	opacity: 0.75;
+}
+
+.version-comment {
+	background: #9b9dff3f;
+	padding: 8px;
+}
+
+.version-files {
+	background: #9b9dff3f;
+	padding: 8px;
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.version-link:link, .version-link:visited {
+	font-weight: 600;
+	background: #9b9dff8f;
+	padding: 4px 6px;
+	text-decoration: none;
+	color: white;
+}
+
+.version-link:hover, .version-link:active {
+	background: #9b9dffdd;
+}
+
+@media (max-width: 1560px) {
+	.recommended {
+		transform: rotate(35deg) translate(108px, 80px) scale(0.8);
+	}
+}
+
+@media (max-width: 1280px) {
+	header {
+		font-size: 32px;
+	}
+
+	.primary-download-link {
+		align-items: flex-start;
+	}
+}
+
+@media (max-width: 1024px) {
+	main {
+		margin: 0 64px;
+	}
+	
+	.recommended {
+		transform: rotate(45deg) translate(124px, 72px) scale(0.7);
+	}
+}
+
+@media (max-width: 840px) {
+	main {
+		margin: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	header {
+		font-size: 24px;
+	}
+	
+	.primary-version {
+		flex-direction: column;
+	}
+}
